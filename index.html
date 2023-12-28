@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Syne:wght@400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/b5b61096f1.js" crossorigin="anonymous"></script>
+    <title>Acceuil</title>
+</head>
+<body>
+
+    <header>
+       <button class="header_recommencer"> Recommencer
+        <!-- <i class="material-symbols-outlined">Autorenew</i> -->
+       </button>
+       <h1>Jeu du Pendu</h1>
+       <button class="header_proposerUnMot">Proposer un mot</button>
+    </header>
+    <main>
+       <div class="information">
+            <ul class="information_jeu">
+                <li class="information_jeu_volume">
+                     <i class="fa-solid fa-volume-xmark" style="display: none;"></i>
+                     <i class="fa-solid fa-volume-high"></i>
+                </li>
+               
+                <li class="information_jeu_mode">
+                   <i class="fa-solid fa-moon fa-flip-horizontal"></i>
+                </li> 
+                <li class="information_jeu_vies">Vies : <i class="fa-solid fa-heart" style="color: red;"></i> <span></span> </li>
+                <li class="information_jeu_score">Score :  <span></span></li>
+                <li class="information_jeu_record">
+                    Record : <span></span>
+                </li>
+                <li class="information_jeu_AcheterUneVie">
+                    <button>
+                        Acheter une lettre :  <i class="fa-solid fa-heart" style="color: red;"></i> 2 
+                    </button>
+                </li>
+              
+            </ul>
+            <section class="information_mot">
+                <h3>Description du mot à trouver</h3>
+                <p></p>
+            </section>
+       </div>
+       <section class="information_image">
+        <!-- image ici -->img
+       </section>
+       <div class="motATrouver">
+           <h3> Trouvez-le :</h3>
+           <div></div>
+        <!-- Mot à trouver en bouton ici -->
+       </div>
+       <section class="clavier">
+          <!-- Clavier ici --> 
+          <div>
+                <button value="a">A</button>
+                <button value="z">Z</button>
+                <button value="e">E</button>
+                <button value="r">R</button>
+                <button value="t">T</button>
+                <button value="y">Y</button>
+                <button value="u">U</button>
+                <button value="i">I</button>
+                <button value="o">O</button>
+                <button value="p">P</button>
+          </div>
+           <div>
+                <button value="q">Q</button>
+                <button value="s">S</button>
+                <button value="d">D</button>
+                <button value="f">F</button>
+                <button value="g">G</button>
+                <button value="h">H</button>
+                <button value="j">J</button>
+                <button value="k">K</button>
+                <button value="l">L</button>
+                <button value="m">M</button>
+           </div>
+           <div>
+                <button value="w">W</button>
+                <button value="x">X</button>
+                <button value="c">C</button>
+                <button value="v">V</button>
+                <button value="b">B</button>
+                <button value="n">N</button>
+           </div>
+           
+       </section>
+
+    </main>
+                <!-- Modal -->
+                <div class="bodyModalBackground"></div>
+                <section class="modal">
+                    <h3>Bienvenue dans le Jeu du Pendu !</h3>
+                    <p>
+                        "Dans ce défi captivant, vous aurez l'occasion de mettre à l'épreuve votre
+                        réflexion et votre perspicacité. Vous serez confronté à un mot mystère
+                        dont la <b>description</b> vous est donnée, avec son nombre de lettres. Votre objectif ? 
+                        Deviner ce mot en proposant des lettres une par une. Attention, vous n'avez que <b>7 essais</b>
+                        pour décoder ce mot caché. Faites preuve de stratégie, utilisez vos 
+                        connaissances et votre intuition pour réussir à résoudre cette énigme linguistique !"
+                    </p>
+                    <div class="modal_ligne"></div>
+                    <div class="modal_boutons" >
+                        <button class="modal_boutons_ok">Okey</button>
+                        <button class="modal_boutons_nePlusAfficher">Ne plus afficher</button>
+                    </div>
+                </section>
+                <section class="modalResultat">
+                    <h3></h3>
+                    <p></p>
+                    <button></button>
+                </section>
+             
+                <form class="modalFormulaireProposerMot">
+                    <i class="fa-solid fa-x"></i>
+                    <h3>Proposer un mot</h3>
+                    <fieldset>
+                        <label for="mot">Mot </label>
+                        <input type="text" id="mot" name="mot" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="description">Description</label>
+                        <textarea  id="description" name="description" required></textarea>
+                    </fieldset>
+                    <div class="modal_ligne"></div>
+                    <button>Envoyer</button>
+                </form>
+                <section class="modalMessage">
+                    <h3></h3>
+                    <p></p>
+                    <button>Okey</button>
+
+                </section>
+
+
+                
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

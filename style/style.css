@@ -1,0 +1,418 @@
+
+:root {
+  --colorPrimaire:#dfddc7; 
+  --colorSecondaire:#f58b54; 
+  --colorTertiaire:#a34a28; 
+  --colorQuaternaire: #211717;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  color: var(--colorQuaternaire);
+}
+html {
+  height: 100%;
+ 
+}
+body {
+  background: var(--colorPrimaire);
+  padding: 0 30px;
+  height: 100%;
+}
+.bodyModalBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.modal, .modalResultat,.modalFormulaireProposerMot , .modalMessage{
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background-color: var(--colorQuaternaire);
+  box-shadow: 0px 4px 14px 0px #00000017;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0px 15px;
+  border-radius: 15px;
+
+}
+.modalFormulaireProposerMot {
+  justify-content: space-evenly;
+}
+.modalFormulaireProposerMot fieldset {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  border: none;
+}
+.modalFormulaireProposerMot input, .modalFormulaireProposerMot textarea{
+  width: 100%;
+  max-width: 300px;
+  min-height: 40px;
+  max-height: 70px  ;
+  color: var(--colorTertiaire);
+}
+.modal p , .modalResultat p,.modalFormulaireProposerMot label ,.modalMessage p {
+  color: var(--colorPrimaire);
+  text-align: center;
+
+}
+.fa-x {
+  color: var(--colorPrimaire); 
+  position: relative;
+  left: 49%;
+  bottom: 7px;
+  font-size: 13px;
+}
+.modal b,.modal h3 , .modalResultat h3 ,.modalFormulaireProposerMot h3 , .modalMessage h3{
+  color: var(--colorSecondaire);
+  text-align: center;
+}
+.modalFormulaireProposerMot .modal_ligne {
+  width: 300px;
+}
+
+.modal_ligne {
+  width: 200px;
+  border: 1px solid var(--colorSecondaire);
+}
+.modal_boutons {
+ display: flex;
+ margin-top: 10px;
+ gap: 10px;
+}
+.modal_boutons button , .modalResultat button ,.modalFormulaireProposerMot button ,.modalMessage button{
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--colorSecondaire);
+  color: var(--colorQuaternaire);
+  background: var(--colorPrimaire);
+  box-shadow: 0px 4px 14px 0px #00000017;
+
+
+}
+.modalResultat {
+  gap: 30px;
+}
+.modalResultat p,.modalResultat button , .modalMessage p , .modalMessage button {
+  font-size: 20px;
+}
+.modalMessage {
+  height: 250px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  margin: 0 auto;
+  padding: 5px 0px;
+}
+header button {
+  height: 40px;
+  padding: 0px 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  background: var(--colorTertiaire);
+  color: var(--colorPrimaire);
+}
+h1 {
+  color: var(--colorTertiaire);
+  font-family:'Lobster', sans-serif;
+  width: 33%;
+  text-align: center;
+
+}
+main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 75px);
+}
+.information {
+  width: 66.6%;
+  height: 175px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.information section , .information ul{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--colorTertiaire);
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+
+}
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+.information_jeu_volume i {
+  color: var(--colorTertiaire);
+}
+
+.information_jeu_mode{
+  width: 50px;
+  height: 25px;
+  background-color: var(--colorTertiaire);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  
+}
+.fa-moon {
+      color: var(--colorPrimaire);
+}
+.dark-mode-icon {
+  transition: all 1s ease;
+}
+
+.information_jeu button{
+  width: 180px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--colorQuaternaire);
+  background: var(--colorTertiaire);
+  color: var(--colorPrimaire);
+}
+.information .information_mot {
+  align-items: center;
+  gap: 30px;
+}
+.information_mot p {
+  text-align: center;
+  font-size: 20px;
+}
+.information_image {
+  position: absolute;
+  right: 30px;
+  width: 31%;
+  height: calc(100vh - 75px);
+  border: 1px solid var(--colorTertiaire);
+  border-radius: 5px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+
+}
+.motATrouver {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 10px;
+  height: 100px;
+  gap: 50px;
+  width: 66.6%;
+  margin-top: 15px;
+  border: 1px solid var(--colorTertiaire);
+  border-radius: 5px;
+  
+}
+.motATrouver h3 {
+  font-size: 25px;
+
+}
+.motATrouver div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.clavier {
+  width: 66.6%;
+  height: 100%;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 10px;
+  flex: 1;
+}
+
+.clavier div:nth-of-type(1){
+  display: flex;
+  gap: 18px;
+}
+.clavier div:nth-of-type(2){
+  display: flex;
+  gap: 13px;
+}
+.clavier div:nth-of-type(3){
+  display: flex;
+  gap: 8px;
+}
+.clavier button , .motATrouver button{
+  background-color: var(--colorTertiaire);
+  font-size: 40px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--colorTertiaire);
+  border-radius: 5px;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  text-transform: uppercase;
+
+}
+.clavier .boutonValide, .motATrouver .boutonValide {
+  background-color: var(--colorQuaternaire);
+  color: var(--colorPrimaire);
+}
+.clavier .boutonNonValide {
+  background-color: var(--colorPrimaire);
+
+  text-decoration: line-through;
+}
+@media all and (max-width:1300px) {
+
+  .information_mot h3 {
+      text-align: center;
+  }  
+  .information_mot p {
+      font-size: 16px;
+  }  
+  .motATrouver {
+      justify-content: start;
+  }
+  .motATrouver h3 {
+      font-size: 16px;
+  }
+  .motATrouver button , .clavier button{
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+  }
+  .clavier button{
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
+  }
+}
+@media all and (max-width:1000px) {
+  
+  /* .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+  } */
+  body {
+      padding: 0px 5px;
+  }
+  header {
+      height: 53px;
+      align-items: center;
+  }
+  header button , header h1 {
+      font-size: 13px;
+  }
+  .information {
+      width: 100%;
+      height: 291px;
+      flex-direction: column;
+  }
+  .information li ,  .information button , .information h3 , .information p,.motATrouver h3{
+      font-size: 13px;
+      width: auto;
+  }
+  .information .information_jeu_mode {
+      width: 50px;
+  }
+  .information_mot {
+      height: 133px;
+  }
+  .information_image {
+      height: 291px;
+      width: 46%;
+      top: 54px;
+      right: 5px;
+  }
+  .motATrouver {
+      padding: 5px;
+      width: 100%;
+      flex-direction: column;
+      gap: 20px;
+      height: 80px;
+  }
+  .motATrouver div {
+      gap: 3px;
+  }
+  .motATrouver h3{
+      font-size: 16px;
+  }
+  .motATrouver button {
+      font-size: 16px;
+      width: 25px;
+      height: 25px;
+  }
+  .clavier {
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
+      gap: 25%;
+  }
+  .clavier div:nth-of-type(1){
+      gap: 5px;
+  }
+  .clavier div:nth-of-type(2){
+      gap: 3px;
+  }
+  .clavier div:nth-of-type(3){
+      gap: 5px;
+  }
+  .clavier button {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      flex: 1;
+      flex-grow: 1;
+  }
+  .modalFormulaireProposerMot ,.modalMessage , .modal {
+      width: 70%;
+      height: 300px;
+      justify-content: center;
+      gap: 10px;
+  }
+  .modalMessage {
+      gap: 20px;
+  }
+  .modal {
+      width: 80%;
+      height: 50%;
+  }
+  .modalFormulaireProposerMot fieldset , .modalFormulaireProposerMot .modal_ligne {
+      width: 80%;
+      margin:  0 auto;
+  }
+  .modalFormulaireProposerMot label , .modalMessage h3 , .modalMessage p , .modalMessage button , .modal p, .modal h3 , .modal button{
+      font-size: 15px;
+  }
+  .modalFormulaireProposerMot input, .modalFormulaireProposerMot textarea {
+      max-width: 100%;
+  }
+
+}
